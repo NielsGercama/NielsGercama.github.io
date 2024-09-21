@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Niels Gercama | Desired Commodities</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="./Styles/pdfviewer.css" />
+		<link rel="stylesheet" href="./Styles/projectPage.css"/>
+		<style>
+
+			#app {
+			}
+
+			#toolbar {
+				background-color:white;
+				color:black;
+				margin-left:10%;
+			}
+
+			#pager {
+				width:50%;
+				height:auto;
+			}
+
+			#viewport-container {
+				background-color:white;
+			}
+
+			#header1 {
+				position: relative;
+				top: 70px;
+				height: 40px;
+				width: 100%;
+			}
+
+			#header2 {
+				position: relative;
+				top: 100px;
+				height: 50px;
+				width: 100%;
+			}
+
+			.folder {
+				position:absolute;
+				left:0;
+				top:250px;
+				width:92%;
+				left:8%;
+			}
+
+			.description {
+				position:absolute;
+				top:0;
+				left:65%;
+				width:22%;
+			}
+
+			.image {
+				width:60%;
+			}
+
+			.dclogo {
+				position:relative;
+				display: inline;
+				width:auto;
+				height:100%;
+			}
+
+			.selector {
+				position: relative;
+				display: inline;
+				width: auto;
+				height: auto;
+				left: 0;
+				padding-right: 5%;
+				font-size: 14px;
+				text-decoration: none;
+			}
+
+			.selector:hover {
+				text-decoration: underline;
+			}
+
+			hr.solid {
+				border-top: 1px solid lightgrey;
+			}
+
+			body {
+				margin-left:8%;
+				margin-right:5%;
+			}
+
+			.infobox {
+				border-radius: 25px;
+				background: #f3f3f3;
+				padding: 20px;
+				width:100%;
+				height: 150px;
+			}
+
+			@keyframes colorshift {
+				0% {background-color: blue;}
+				50% {background-color: yellow;}
+				100% {background-color:blue;}
+			}
+
+		</style>
+	</head>
+
+	<body>
+
+		<script>
+			if (screen.width <= 699) {
+        		document.location = "https://nielsgercama.com/mobile/desiredcommodities";
+        	}
+			
+			function folder_to(idx) {
+				var elements = document.getElementsByClassName("folder");
+				for (var i=0, max=elements.length; i < max; i++) {
+					elements[i].style.opacity=0;
+					elements[i].style.pointerEvents = 'none';
+				}
+				elements[idx].style.opacity=1;
+				elements[idx].style.pointerEvents = 'auto';
+
+
+
+
+				var elements = document.getElementsByClassName("selector");
+				for (var i=0, max=elements.length; i < max; i++) {
+					elements[i].style.opacity=0.4;
+				}
+				elements[idx].style.opacity=1;
+
+				window.scrollTo({top: 0})
+			}
+
+
+
+			function load_url(url) {
+				window.location.href = url;
+			}
+			
+			function random_number(len) {
+				return Math.random().toString().substring(2,2+len);
+			}
+			
+			function random_cur() {
+				const currencies = "$€£¥₣₹₫₲฿₼₴";
+				const idx = Math.round(Math.random()*(currencies.length-1))
+				return currencies.substring(idx,idx+1);
+			}
+			
+			function random_stars(len) {
+				const stars = ["&#9733;","&#9734;"];
+				var result = [];
+				for (kk = 0, kkmax=len; kk<kkmax;kk++) {
+					if (result.length > 0) {
+						if (result.slice(-1) == stars[0]) {
+							result.push(stars[Math.round(Math.random())]);
+						} else {
+							result.push(stars[1]);
+						}
+					} else {
+						result.push(stars[Math.round(Math.random())]);
+					}
+				}
+				return result.join(" ");
+			}
+			
+			function randomize_text() {
+				
+				
+				var txt2change = document.getElementsByName("randominfo");
+				var price2change = document.getElementsByName("randomprice");
+				var rat2change = document.getElementsByName("randomrating");
+				
+				var ll = [];
+				var result="";
+				for (var i=0, imax=txt2change.length; i < imax; i++) {
+					ll = txt2change[i].innerHTML.split(" ");
+					result="";
+					for (var j=0, jmax=ll.length; j < jmax; j++) {
+						result += Math.random().toString(36).substring(2, ll[j].length+2) + " "; 
+					}
+					txt2change[i].innerHTML = "&#9432; " + result.substring(2, result.length);
+				}
+				
+				for (var m=0, mmax=price2change.length; m < mmax; m++) {
+					price2change[m].innerHTML = random_cur() + random_number(2) +".<sup>" + random_number(2) + "</sup>";
+				}
+				
+				for (var k=0, kmax=rat2change.length; k<kmax; k++) {
+					rat2change[k].innerHTML = random_stars(5) + " (" + random_number(3) + ")";
+				}
+			}
+			
+			window.onscroll = function() {randomize_text()};
+			
+			function like(element) {
+				if (element.innerHTML == "<b>♡</b>") {
+					element.innerHTML = "<b>–</b>";
+				} else if (element.innerHTML == "<b>–</b>"){
+					element.innerHTML = "<b>♡</b>";
+				} else {
+					console.log(element.innerHTML);
+				}
+			}
+			
+			
+		</script>
+
+		<div id="header1">
+			<a href="" class="dclogo"><img src="../Media/Projects/DesiredCommodities/desiredcommoditieslogo.png" style="height:100%"></img></a>
+			<div class="infobox" style="position:absolute; display:inline; margin-left:40px; margin-top:-5px; width:60%; height:10px;"></div>
+		</div>
+
+	<div id="header2">
+		<p class="selector" onclick="folder_to(0)"><b>Design Strategy</b></p>
+		<p class="selector" onclick="folder_to(1)"><b>Studio Photos</b></p>
+		<p class="selector" onclick="folder_to(2)"><b>IKEA Intervention</b></p>
+		<p class="selector" onclick="folder_to(3)"><b>Exhibit May 2023</b></p>
+		<hr class="solid"></hr>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">...</p>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">/</p>
+	<a class="selector" style="font-size:12px; color:grey; padding:0;" href="https://nielsgercama.com">niels gercama</a>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">/</p>
+	<a class="selector" style="font-size:12px; color:grey; padding:0;" href="">desired commodities</a>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">/</p>
+	</div>
+
+
+
+<div class="folder">
+	<div class="description">
+	
+		<p style="font-size:20px; margin-bottom:0; left:100%; position:absolute; margin-top:-5px;" onclick="like(this)"><b>♡</b></p>
+		<p style="font-size:15px; margin-bottom:0; margin-top:0;"> <b>Desired Commodities</b></p>
+		<p style="font-size:15px; color:darkgrey; margin-top:7px;">Non-Prescriptive Object</p>
+		<p style="font-size:30px; margin-top:7px; margin-bottom:0px;" name="randomprice">$XX.<sup>xx</sup></p>
+		<p style="font-size:14px; margin-top:5px;" name="randomrating">&#9733; &#9733; &#9733; &#9733; &#9734; (441)</p>
+		<p style="font-size:12px; margin-top:5px; color:darkgrey;" name="randominfo">ⓘ Light bulb sold separately. IKEA recommends LED bulb E27 globe opal white.</p>
+		<div class="infobox"></div>
+		<div class="infobox" style="animation-name: colorshift; animation-duration: 8s; animation-iteration-count: infinite;
+margin-top:10px;"></div>
+	</div>
+	<div class="image">
+		<div id="app">
+			<div role="toolbar" id="toolbar">
+				<div id="pager">
+					<button data-pager="prev">&#8592;</button>
+					<button data-pager="next">&#8594;</button>
+				</div>
+			</div>
+			<div id="viewport-container"><div role="main" id="viewport"></div></div>
+		</div>
+	</div>
+</div>
+
+<div class="folder">
+	<div class="description">
+	
+		<p style="font-size:20px; margin-bottom:0; left:100%; position:absolute; margin-top:-5px;" onclick="like(this)"><b>♡</b></p>
+		<p style="font-size:15px; margin-bottom:0; margin-top:0;"> <b>Desired Commodities</b></p>
+		<p style="font-size:15px; color:darkgrey; margin-top:7px;">Studio Photos</p>
+		<p style="font-size:30px; margin-top:7px; margin-bottom:0px;" name="randomprice">$XX.<sup>xx</sup></p>
+		<p style="font-size:14px; margin-top:5px;" name="randomrating">&#9733; &#9733; &#9733; &#9733; &#9734; (441)</p>
+		<p style="font-size:12px; margin-top:5px; color:darkgrey;" name="randominfo">ⓘ Light bulb sold separately. IKEA recommends LED bulb E27 globe opal white.</p>
+		<div class="infobox"></div>
+		<div class="infobox" style="animation-name: colorshift; animation-duration: 8s; animation-iteration-count: infinite;
+margin-top:10px;"></div>
+	</div>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype1.jpg">
+	<span><em><strong></strong>Prototype 1</em> [2022]. Silicone, metal, chalk, latex balloons</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype2.jpg">
+	<span><em><strong></strong>Prototype 1</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype3.jpg">
+	<span><em><strong></strong>Bound</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype4.jpg">
+	<span><em><strong></strong>Shaped</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype5.jpg">
+	<span><em><strong></strong>Stretched</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype6.jpg">
+	<span><em><strong></strong>Feature prototype 1</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype7.jpg">
+	<span><em><strong></strong>Feature prototype 1</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype8.jpg">
+	<span><em><strong></strong>UdK/TU Berlin - Studio presentation</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/studio.jpg">
+	<span><em><strong></strong>UdK/TU Berlin - Studio presentation</em></span>
+	<p></p>
+</div>
+
+<div class="folder">
+	<div class="description">
+	
+		<p style="font-size:20px; margin-bottom:0; left:100%; position:absolute; margin-top:-5px;" onclick="like(this)"><b>♡</b></p>
+		<p style="font-size:15px; margin-bottom:0; margin-top:0;"> <b>Desired Commodities</b></p>
+		<p style="font-size:15px; color:darkgrey; margin-top:7px;">IKEA Intervention</p>
+		<p style="font-size:30px; margin-top:7px; margin-bottom:0px;" name="randomprice">$XX.<sup>xx</sup></p>
+		<p style="font-size:14px; margin-top:5px;" name="randomrating">&#9733; &#9733; &#9733; &#9733; &#9734; (441)</p>
+		<p style="font-size:12px; margin-top:5px; color:darkgrey;" name="randominfo">ⓘ Light bulb sold separately. IKEA recommends LED bulb E27 globe opal white.</p>
+		<div class="infobox"></div>
+		<div class="infobox" style="animation-name: colorshift; animation-duration: 8s; animation-iteration-count: infinite;
+margin-top:10px;"></div>
+	</div>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/3.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/4.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/5.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/1.jpg">
+	<span><em><strong></strong>NPO toolset</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/2.jpg">
+	<span><em><strong></strong>NPO toolset</em> [2023]</span>
+	<p></p>
+	
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/6.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/8.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/10.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/12.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/20.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+</div>
+
+<div class="folder">
+	<p class="image" style="font-size:50px">COMING SOON</p>
+</div>
+
+<div class="bar">
+	<img src="../Media/Misc/logo.gif" class="logo" />
+	<p class="homebutton"><a href="https://nielsgercama.com" class="link">NIELS GERCAMA &nbsp &nbsp | &nbsp &nbsp New Media</a></p>
+	<p class="homebutton" style="left:86%"><a href="mailto:nielsgercama@gmail.com" class="link">CONTACT</a> &nbsp &nbsp | &nbsp &nbsp <a href="https://www.instagram.com/niels_gercama/?hl=nl" class="link"> @niels_gercama </a></p>
+</div>
+<p class="copyright">&copy; copyright Niels Gercama</p>  
+
+<script src="https://unpkg.com/pdfjs-dist@2.0.489/build/pdf.min.js"></script>
+<script src="./JS/pdfviewer.js"></script>
+<script>
+	initPDFViewer("Media/Docs/DesiredCommodities_Booklet.pdf");
+	folder_to(0);
+	window.scrollTo(0, 0);
+</script>
+</body>
+</html>

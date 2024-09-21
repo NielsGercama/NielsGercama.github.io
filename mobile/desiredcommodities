@@ -1,0 +1,280 @@
+<html>
+	<head>
+		<title>Niels Gercama | New Media</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			.mobile-container {
+				position:relative;
+				left:0;
+				top:0;
+				width:100%;
+				height: auto;
+			}
+
+			.topnav {
+				position:fixed;
+				width:100%;
+				top:0;
+				left:0;
+				background-color: black;
+			}
+
+			.topnav #myLinks {
+				display: none;
+			}
+
+			.topnav a {
+				color: white;
+				padding: 14px 16px;
+				text-decoration: none;
+				font-size: 17px;
+				display: block;
+			}
+
+			.topnav a.icon {
+				display: block;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+
+			h3 {
+				font-size: 60px;
+				color:black;
+
+			}
+
+			h2 {
+				font-size: 25px;
+			}
+
+			.image {
+				width:100%;
+				height:auto;
+				padding-top: 5px;
+			}
+
+			span {
+				font-size:12px;
+			}
+
+			smallp {
+				font-size:9px;
+			}
+
+			a {
+				color:black;
+			}
+
+			a:hover, a:selected, a:active {
+				color:black;
+			}
+			
+			hr.solid {
+				border-top: 1px solid grey;
+			}
+			
+			@keyframes colorshift {
+				0% {background-color:blue;}
+				50% {background-color:yellow;}
+				100% {background-color:blue;}
+			}
+
+		</style>
+
+		<script src="https://kit.fontawesome.com/cc5a54f747.js" crossorigin="anonymous">
+		</script>
+	</head>
+	<body>
+		<script>
+			function random_number(len) {
+				return Math.random().toString().substring(2,2+len);
+			}
+			
+			function random_cur() {
+				const currencies = "$€£¥₣₹₫₲฿₼₴";
+				const idx = Math.round(Math.random()*(currencies.length-1))
+				return currencies.substring(idx,idx+1);
+			}
+			
+			function random_stars(len) {
+				const stars = ["&#9733;","&#9734;"];
+				var result = [];
+				for (kk = 0, kkmax=len; kk<kkmax;kk++) {
+					if (result.length > 0) {
+						if (result.slice(-1) == stars[0]) {
+							result.push(stars[Math.round(Math.random())]);
+						} else {
+							result.push(stars[1]);
+						}
+					} else {
+						result.push(stars[Math.round(Math.random())]);
+					}
+				}
+				return result.join(" ");
+			}
+			
+			function randomize_text() {
+				
+				
+				var txt2change = document.getElementsByName("randominfo");
+				var price2change = document.getElementsByName("randomprice");
+				var rat2change = document.getElementsByName("randomrating");
+				
+				var ll = []
+				var result=""
+				for (var i=0, max=1; i < max; i++) {
+					ll = txt2change[i].innerHTML.split(" ");
+					for (var j=0, jmax=ll.length; j < jmax; j++) {
+						result += Math.random().toString(36).substring(2, ll[j].length+2) + " "; 
+					}
+					txt2change[i].innerHTML="&#9432; " + result.substring(2, result.length);;
+				}
+				
+				for (var m=0, mmax=price2change.length; m < mmax; m++) {
+					price2change[m].innerHTML = random_cur() + random_number(2) +".<sup>" + random_number(2) + "</sup>";
+				}
+				
+				for (var k=0, kmax=rat2change.length; k<kmax; k++) {
+					rat2change[k].innerHTML = random_stars(5) + " (" + random_number(3) + ")";
+				}
+			}
+
+			window.onscroll = function() {randomize_text()};
+		</script>
+		<div class="mobile-container">
+
+			<!-- Top Navigation Menu -->
+			<div class="topnav">
+				<a class="active" href="https://nielsgercama.com/mobile/">Niels Gercama | New Media</a>
+				<div id="myLinks" onClick="toggleMenu()">
+					<a href="#designstrategy">Design Strategy</a>
+					<a href="#studiophotos">Studio Photos</a>
+					<a href="#ikeaintervention">IKEA Intervention</a>
+					<a href="#exhibit">Exhibit May 2023</a>
+				</div>
+				<a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+					<i class="fa fa-bars"></i>
+				</a>
+			</div>
+			
+			<img src="../Media/Projects/DesiredCommodities/desiredcommoditieslogo.png" style="width:25%; height:auto; margin-top:15%; padding-left:5%;" class="image"/>
+			<div style="border-radius:30px; background-color:#f5f5f5; width:90%; height:6.5%; margin-top:5%; margin-left:5%; "></div>
+			<p></p>
+			
+			<p style="color:darkgrey; font-size:10px;">... / niels gercama / desired commodities /</p>
+			<hr class="solid"></hr>
+			<p></p>
+				
+			<p id="designstrategy" style="font-size:14px;"><a href="">Desired Commodities</a> - <b>Design Strategy</b></p>
+			<a href="https://nielsgercama.com/Media/Docs/DesiredCommodities_Booklet.pdf" style="text-decoration:none; border-radius:1000px; background-color:blue; color:white; font-size:30px; text-align: center; padding-top:125px; padding-bottom:125px; display: block; animation-name: colorshift; animation-duration: 16s; animation-iteration-count: infinite;">PDF <br></br> Link</a>
+			
+			<p style="font-size:15px; margin:0; padding-top:10%;"><b>Desired Commodities</b></p>
+			<p style="font-size:15px; color:darkgrey; padding-top:5px; margin:0;" >Non-Prescriptive Object</p>
+			<p style="font-size:30px; margin-top:7px; margin-bottom:0px;" name="randomprice">$XX.<sup>xx</sup></p>
+			<p style="font-size:14px; margin-top:5px;" name="randomrating">&#9733; &#9733; &#9733; &#9733; &#9734; (441)</p>
+			<p style="font-size:12px; margin-top:5px; color:darkgrey;" name="randominfo">&#9432; Light bulb sold separately. IKEA recommends LED bulb E27 globe opal white.</p>
+			<p style="border-radius:30px; color:#f5f5f5; background-color:#f5f5f5; width:100%; height:30%;></p>
+			
+			<hr class="solid"></hr>
+			<p></p>
+			<p id="studiophotos" style="font-size:14px;"><a href="">Desired Commodities</a> - <b>Studio Photos</b></p>
+			<img class="image" src="../Media/Projects/DesiredCommodities/prototype1.jpg">
+	<span><em><strong></strong>Prototype 1</em> [2022]. Silicone, metal, chalk, latex balloons</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype2.jpg">
+	<span><em><strong></strong>Prototype 1</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype3.jpg">
+	<span><em><strong></strong>Bound</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype4.jpg">
+	<span><em><strong></strong>Shaped</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype5.jpg">
+	<span><em><strong></strong>Stretched</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype6.jpg">
+	<span><em><strong></strong>Feature prototype 1</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype7.jpg">
+	<span><em><strong></strong>Feature prototype 1</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/prototype8.jpg">
+	<span><em><strong></strong>UdK/TU Berlin - Studio presentation</em></span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/studio.jpg">
+	<span><em><strong></strong>UdK/TU Berlin - Studio presentation</em></span>
+	<p></p>
+			
+			<div id="ikeaintervention">
+				<hr class="solid"></hr>
+				<p></p>
+				<p style="font-size:14px;"><a href="">Desired Commodities</a> - <b>IKEA Intervention</b></p>
+				<img class="image" src="../Media/Projects/DesiredCommodities/intervention/3.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/4.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/5.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/1.jpg">
+	<span><em><strong></strong>NPO toolset</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/2.jpg">
+	<span><em><strong></strong>NPO toolset</em> [2023]</span>
+	<p></p>
+	
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/6.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/8.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/10.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/12.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/DesiredCommodities/intervention/20.jpg">
+	<span><em><strong></strong>NPO</em> [2023]</span>
+	<p></p>
+			</div>
+			
+			<div id="exhibit">
+				<hr class="solid"></hr>
+				<p></p>
+				<p style="font-size:14px;"><a href="">Desired Commodities</a> - <b>Exhibit May 2023</b></p>
+				<p style="font-size:30px;">Coming Soon</p>
+			</div>
+			
+			<p style="font-size:14px; opacity:0.5;">&copy; copyright Niels Gercama</p>
+			
+			<script>
+				function toggleMenu() {
+					var x = document.getElementById("myLinks");
+					if (x.style.display === "block") {
+						x.style.display = "none";
+					} else {
+						x.style.display = "block";
+					}
+				}
+				
+				if (screen.width > 699) {
+					document.location = "https://nielsgercama.com/desiredcommodities";
+				}
+			</script>
+
+			</body>
+		</html>
+

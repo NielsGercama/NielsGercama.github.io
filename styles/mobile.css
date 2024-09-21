@@ -1,0 +1,70 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+	position:relative;
+	left:0;
+	top:0;
+	width:100%;
+	height: auto;
+}
+
+.topnav {
+	position:fixed;
+	width:100%;
+	top:0;
+	left:0;
+	background-color: black;
+}
+
+.topnav #myLinks {
+	display: none;
+}
+
+.topnav a {
+	color: white;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 17px;
+	display: block;
+}
+
+.topnav a.icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+h3 {
+	font-size: 60px;
+	color:black;
+
+}
+
+h2 {
+	font-size: 25px;
+}
+
+.image {
+	width:100%;
+	height:auto;
+	padding-top: 5px;
+}
+
+span {
+	font-size:12px;
+}
+
+smallp {
+	font-size:9px;
+}
+
+a {
+	color:black;
+}
+
+a:hover, a:selected, a:active {
+	color:black;
+}

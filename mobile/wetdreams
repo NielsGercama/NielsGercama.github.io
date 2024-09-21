@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Niels Gercama | Wet Dreams</title>
+		<script>
+			if (screen.width > 699) {
+				document.location = "wetdreams";
+			}
+		</script>
+		<style>
+			a {
+				font-size:60px;
+				font-family:arial;
+				position:fixed;
+				top:25%;
+				left:5%;
+				color:black;
+			}
+			
+			a:selected, a:active {
+				color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="https://nielsgercama.com/mobile/">The <i>Wet Dreams</i> environment is availble only on PC. Click here to return</a>
+	</body>
+</html>

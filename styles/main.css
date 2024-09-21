@@ -1,0 +1,282 @@
+#canvas1 {
+			position: relative;
+			width: 50%;
+			height:auto;
+			filter: url("#goo");
+			border: 2px solid red;
+			background-color: white;
+		}
+		
+		.bar {
+            background: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+			border: 1px white;
+        }
+
+        .logo {
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: auto;
+            height: 80%;
+            padding: 5px;
+        }
+
+        .homebutton {
+            position: absolute;
+            top: 15%;
+            left: 16%;
+            font-size: 12px;
+            color: white;
+        }
+
+		.contactbutton {
+            position: absolute;
+            top: 15%;
+            left: 40%;
+            font-size: 12px;
+            color: white;
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+        }
+
+            .link:visited, .link:link, .link:active {
+                color: white;
+            }
+
+            .link:hover {
+                color: darkgray;
+            }
+
+        .index_container {
+            position: fixed;
+            left: 1.5%;
+            top: 15%;
+            height: auto;
+            width: 15%;
+        }
+
+        .index {
+            position: relative;
+            left: 0;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+		
+		.indexYear {
+			position: relative;
+			left: 0;
+			color: black;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size:15px;
+		}
+		
+		
+        .folder {
+            position: absolute;
+            left: 15%;
+            top: 15%;
+            height: auto;
+            width: 78.5%;
+            opacity: 0;
+        }
+
+        .image {
+            position: relative;
+            width: 80%;
+            height: auto;
+            vertical-align: bottom;
+        }
+		
+		.image.button {
+			opacity:0.7;
+		}
+		
+		.image.button:hover {
+			opacity:1;
+		}
+
+        .vid {
+            position: relative;
+            width: 50%;
+            height: auto;
+            vertical-align: bottom;
+        }
+
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 10px;
+            left: 10%;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+
+        .description {
+            position: fixed;
+            left: 80%;
+            top: 15%;
+            font-size: 12px;
+            width: 17%;
+            height: auto;
+			text-align: justify;
+			text-justify: inter-character;
+        }
+
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+        }
+
+		::selection {
+  			color:lightskyblue;
+		}
+
+        .a {
+            text-decoration: none;
+        }
+
+            .a:visited, .a:link, .a:active {
+                color: black;
+            }
+
+        .switch {
+            border: 1px dashed black;
+            color: mediumpurple;
+			animation-name: switchcolor;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+            left: -15px;
+            position: fixed;
+            text-align: center;
+            top: 300px;
+            width: 30px;
+            height: 240px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(-180deg);
+            padding-left: 5px;
+        }
+
+            .switch:hover {
+				animation-play-state: paused;
+            }
+		
+		@keyframes switchcolor {
+			0% {
+				color: mediumpurple;
+				border-color: mediumpurple;
+			}
+			50% {
+				color:red;
+				border-color: red;
+			}
+			100% {
+				color: mediumpurple;
+				border-color: mediumpurple;
+			}
+		}
+
+		.inactiveswitch {
+            border: 1px dashed grey;
+            color: darkgrey;
+            left: -15px;
+            position: fixed;
+            text-align: center;
+			animation-name: inactiveswitchcolor;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+			animation-play-state: paused;
+            top: 300px;
+            width: 30px;
+            height: 240px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(-180deg);
+            padding-left: 5px;
+        }
+
+		.inactiveswitch:hover {
+				animation-play-state: running;
+            }
+
+		.inactiveswitch:not(:hover) {
+				color: darkgrey;
+				border-color: grey;
+			}
+
+		@keyframes inactiveswitchcolor {
+			0% {
+				color: darkgrey;
+				border-color: grey;
+			}
+			50% {
+				color:red;
+				border-color: red;
+			}
+			100% {
+				color: darkgrey;
+				border-color: grey;
+			}
+		}
+
+		
+		
+        .copyright {
+            color: black;
+            font-size: 10px;
+            position: fixed;
+            bottom: 1%;
+            right: 0;
+            text-align: right;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            opacity: 0.2;
+        }
+
+            .copyright:hover {
+                opacity: 1;
+            }
+		
+		.rangeslider{
+			position: absolute;
+            left: 60%;
+            bottom: 0%;
+            width: 20%;
+            height: auto;
+		}
+  
+		.myslider {
+			-webkit-appearance: none;
+			background: #ffcccb  ;
+			width: 50%;
+			height: 5px;
+			opacity: 2;
+		   }
+
+
+		.myslider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			cursor: pointer;
+			background: #FF0000  ;
+			width: 5%;
+			height: 20px;
+		}
+
+
+		.myslider:hover {
+			opacity: 1;
+		}

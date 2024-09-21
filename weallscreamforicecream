@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Niels Gercama | We All Scream For Ice Cream</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="../Styles/projectPage.css"/>
+		<style>
+
+
+			#viewport-container {
+				background-color:white;
+			}
+
+			#header1 {
+				position: relative;
+				top: 70px;
+				height: 40px;
+				width: 100%;
+			}
+
+			#header2 {
+				position: relative;
+				top: 100px;
+				height: 50px;
+				width: 100%;
+			}
+
+			.folder {
+				position:absolute;
+				left:0;
+				top:200px;
+				width:92%;
+				left:8%;
+			}
+
+			.description {
+				position:absolute;
+				top:0;
+				left:65%;
+				width:22%;
+			}
+
+			.image {
+				width:60%;
+			}
+
+			.dclogo {
+				position:relative;
+				display: inline;
+				width:auto;
+				height:100%;
+			}
+
+			.selector {
+				position: relative;
+				display: inline;
+				width: auto;
+				height: auto;
+				left: 0;
+				padding-right: 5%;
+				font-size: 14px;
+				text-decoration: none;
+			}
+
+			.selector:hover {
+				text-decoration: underline;
+			}
+
+			hr.solid {
+				border-top: 1px solid lightgrey;
+			}
+
+			body {
+				margin-left:8%;
+				margin-right:5%;
+			}
+
+			.infobox {
+				border-radius: 25px;
+				background: #f3f3f3;
+				padding: 20px;
+				width:100%;
+				height: 150px;
+			}
+
+			@keyframes colorshift {
+				0% {background-color: darkred;}
+				50% {background-color: white;}
+				100% {background-color:darkred;}
+			}
+
+		</style>
+	</head>
+
+	<body style="background-color: #ffe6e6">
+
+		<script>
+			if (screen.width <= 699) {
+        		document.location = "https://nielsgercama.com/mobile/weallscreamforicecream";
+        	}
+			
+			function folder_to(idx) {
+				var elements = document.getElementsByClassName("folder");
+				for (var i=0, max=elements.length; i < max; i++) {
+					elements[i].style.opacity=0;
+					elements[i].style.pointerEvents = 'none';
+				}
+				elements[idx].style.opacity=1;
+				elements[idx].style.pointerEvents = 'auto';
+
+
+
+
+				var elements = document.getElementsByClassName("selector");
+				for (var i=0, max=elements.length; i < max; i++) {
+					elements[i].style.opacity=0.4;
+				}
+				elements[idx].style.opacity=1;
+
+				window.scrollTo({top: 0})
+			}
+
+
+
+			function load_url(url) {
+				window.location.href = url;
+			}
+			
+			function random_number(len) {
+				return Math.random().toString().substring(2,2+len);
+			}
+			
+			function random_cur() {
+				const currencies = "$€£¥₣₹₫₲฿₼₴";
+				const idx = Math.round(Math.random()*(currencies.length-1))
+				return currencies.substring(idx,idx+1);
+			}
+			
+			function random_stars(len) {
+				const stars = ["&#9733;","&#9734;"];
+				var result = [];
+				for (kk = 0, kkmax=len; kk<kkmax;kk++) {
+					if (result.length > 0) {
+						if (result.slice(-1) == stars[0]) {
+							result.push(stars[Math.round(Math.random())]);
+						} else {
+							result.push(stars[1]);
+						}
+					} else {
+						result.push(stars[Math.round(Math.random())]);
+					}
+				}
+				return result.join(" ");
+			}
+			
+			function randomize_text() {
+				
+				
+				var txt2change = document.getElementsByName("randominfo");
+				var price2change = document.getElementsByName("randomprice");
+				var rat2change = document.getElementsByName("randomrating");
+				
+				var ll = [];
+				var result="";
+				for (var i=0, imax=txt2change.length; i < imax; i++) {
+					ll = txt2change[i].innerHTML.split(" ");
+					result="";
+					for (var j=0, jmax=ll.length; j < jmax; j++) {
+						result += Math.random().toString(36).substring(2, ll[j].length+2) + " "; 
+					}
+					txt2change[i].innerHTML = "&#9432; " + result.substring(2, result.length);
+				}
+				
+				for (var m=0, mmax=price2change.length; m < mmax; m++) {
+					price2change[m].innerHTML = random_cur() + random_number(2) +".<sup>" + random_number(2) + "</sup>";
+				}
+				
+				for (var k=0, kmax=rat2change.length; k<kmax; k++) {
+					rat2change[k].innerHTML = random_stars(5) + " (" + random_number(3) + ")";
+				}
+			}
+			
+			window.onscroll = function() {randomize_text()};
+			
+			function like(element) {
+				if (element.innerHTML == "<b>♡</b>") {
+					element.innerHTML = "<b>–</b>";
+				} else if (element.innerHTML == "<b>–</b>"){
+					element.innerHTML = "<b>♡</b>";
+				} else {
+					console.log(element.innerHTML);
+				}
+			}
+			
+			
+		</script>
+
+	<div id="header2">
+		<p class="selector" onclick="folder_to(0)"><b>Mood</b></p>
+		<p class="selector" onclick="folder_to(1)"><b>CTM / Transmediale</b></p>
+		<p class="selector" onclick="folder_to(2)"><b>MANIFEST:IO</b></p>
+		<p class="selector" onclick="folder_to(3)"><b>Tech specifications</b></p>
+		<hr class="solid"></hr>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">...</p>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">/</p>
+	<a class="selector" style="font-size:12px; color:grey; padding:0;" href="https://nielsgercama.com">niels gercama</a>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">/</p>
+	<a class="selector" style="font-size:12px; color:grey; padding:0;" href="">We All Scream For Ice Cream!</a>
+	<p style="position:relative; display:inline; left:0; color:darkgrey;">/</p>
+	</div>
+
+
+
+<div class="folder">
+	<div class="description">
+	
+		<p style="font-size:20px; margin-bottom:0; left:100%; position:absolute; margin-top:-5px;" onclick="like(this)"><b>♡</b></p>
+		<p style="font-size:15px; margin-bottom:0; margin-top:0;"> <b>We All Scream For Ice Cream! (2023)</b></p>
+		<p style="font-size:15px; color:darkgrey; margin-top:7px;">Niels Gercama and <a href="https://www.jasonandrewclark.com/" style="color:darkgrey">Jason Clark<a></p>
+		<p style="font-size:15px; color:darkgrey; margin-top:7px;">Video and sound installation (iPhone, projector, laptop, steel, glass, silicone, human hair, plastic, waste paper) <br><br>Dimensions: Material ~(1x1x1 mtrs.), Projection (1.80x1.80 mtrs.)</p> 
+
+		<p style="font-size:30px; margin-top:7px; margin-bottom:0px;" name="randomprice">$XX.<sup>xx</sup></p>
+		<p style="font-size:14px; margin-top:5px;" name="randomrating">&#9733; &#9733; &#9733; &#9733; &#9734; (441)</p>
+		<p style="font-size:12px; margin-top:5px; color:darkgrey;" name="randominfo">ⓘ Light bulb sold separately. IKEA recommends LED bulb E27 globe opal white.</p>
+		<div class="infobox"></div>
+		<div class="infobox" style="animation-name: colorshift; animation-duration: 8s; animation-iteration-count: infinite;
+margin-top:10px;"></div>
+	</div>
+	<p style="font-size:25px" class="image">In Jim Jarmusch' seminal film "Down By Law" three prisoners, in a momentary lapse of reason speaking in Babylonian tongues, form a bond over repeating the phrase "I scream, you scream, we all scream for ice cream!". Ice cream, its figure in advertising and screaming children running to gather around the ice cream truck produce a sense of community, all to a recognizable dinky tune. In Taiwan, this moment is reproduced in the management of waste: rather than the indiscriminate beep-beep hidden by the morning fog, Taiwanese garbage trucks ring with beautiful simple melodies, letting people know it is time to gather and dispose of their communal waste. Meanwhile, as internet platforms wage war over dominance of the access portal, we find ourselves as prisoners stuck conversing from bubbles, doomscrolling in the prison of internet noise - down by law. <em>We all scream for ice cream!</em> explores  the ice-cream model of Taiwanese waste management and the ethereal apparition of community amidst the access portal war. As an audiovisual installation, it combines found social media footage, waste and prison material to communicate the proposed narrative. 
+	<br><br>
+	<em>We all scream for ice cream!</em> will be shown during the <i>CTM / Transmediale 2023 Vorspiel</i> at Mahalla Berlin and will take part in <i>MANIFEST:IO - The Symposium for New Media and Electronic Art</i> Below are a selection of images capturing an early-stage mood: 
+</p>
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/mood1.jpg">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. Mood 1</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/mood2.jpg">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. Mood 2</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/mood3.jpg">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. Mood 3</span>
+	<p></p>
+</div>
+
+<div class="folder">
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/CTM2023/1.png">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. CTM / Transmediale 2023</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/CTM2023/2.png">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. CTM / Transmediale 2023</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/CTM2023/3.png">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. CTM / Transmediale 2023</span>
+	<p></p>
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/CTM2023/4.png">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. CTM / Transmediale 2023</span>
+	<p></p>
+</div>
+
+<div class="folder">
+	<p class="image" style="font-size:50px">COMING SOON</p>
+</div>
+
+<div class="folder">
+	<p class="image" style="font-size:12px"><strong> Technical details </strong><br><br>
+	Video and sound installation <br>
+	(iPhone, projector, laptop, steel, glass, silicone, human hair, plastic, waste paper) <br><br>
+	</p>
+	<p class="image" style="font-size:12px"><strong>Dimensions</strong><br><br>
+	Material ~(1x1x1 mtrs.)<br>
+	Projection (1.80x1.80 mtrs.)<br><br>
+	</p>
+	<p class="image" style="font-size:12px"><strong>Tech rider</strong>
+	<br><br>
+	Long throw projector (HD)<br>
+	2 Speakers<br>
+	2 Speaker stands<br>
+	Studio light<br>
+	</p>
+	
+	<img class="image" src="../Media/Projects/WeAllScreamForIceCream/plan.png">
+	<span><em><strong></strong>We all scream for ice cream!</em> [2023]. Plan</span>
+
+</div>
+
+<div class="bar" style="background-color:black">
+	<img src="../Media/Misc/logo.gif" class="logo" />
+	<p class="homebutton"><a href="https://nielsgercama.com" class="link">NIELS GERCAMA &nbsp &nbsp | &nbsp &nbsp New Media</a></p>
+	<p class="homebutton" style="left:86%"><a href="mailto:nielsgercama@gmail.com" class="link">CONTACT</a> &nbsp &nbsp | &nbsp &nbsp <a href="https://www.instagram.com/niels_gercama/?hl=nl" class="link"> @niels_gercama </a></p>
+</div>
+<p class="copyright">&copy; copyright Niels Gercama</p>  
+
+<script>
+	folder_to(0);
+	window.scrollTo(0, 0);
+</script>
+</body>
+</html>

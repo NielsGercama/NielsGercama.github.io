@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Niels Gercama | Wet Dreams</title>
+	<style>
+		a, a:active, a:visited { color: white; }
+			a:hover {color: red;}
+
+			h2 {text-align: center;  color:white; font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;}
+			p {text-align: center; color:white; font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;}
+
+			.bar {
+				background-color:black;
+				position:absolute;
+				top:0;
+				left:0;
+				width:100%;
+				height:50px;
+			}
+			.logo {
+				float:left;
+				position: relative;
+				top: 0;
+				left: 0;
+				width: auto;
+				height: 80%;
+				padding: 5px;
+			}
+			
+			.homebutton {
+            position: absolute;
+            top: 15%;
+            left: 4%;
+            font-size: 12px;
+            color: darkgray;
+        }
+
+        .link {
+            text-decoration: none;
+            color: darkgray;
+        }
+
+            .link:visited, .link:link, .link:active {
+                color: darkgray;
+            }
+
+            .link:hover {
+                color: white;
+            }
+
+            .homebutton:hover {
+                color: white
+            }
+			
+			p {
+            	font-family: Arial, Helvetica, sans-serif;
+        	}
+			
+			.copyright {
+            color: white;
+            font-size: 10px;
+            position: fixed;
+            bottom: 1%;
+            right: 0;
+            text-align: right;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            opacity: 0.2;
+        }
+
+            .copyright:hover {
+                opacity: 1;
+            }
+			
+		.switch {
+            border: 1px dashed black;
+            color: mediumpurple;
+			animation-name: switchcolor;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+            left: -15px;
+            position: fixed;
+            text-align: center;
+            top: 300px;
+            width: 30px;
+            height: 240px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            writing-mode: vertical-lr;
+            text-orientation: mixed;
+            transform: rotate(-180deg);
+            padding-left: 5px;
+        }
+
+            .switch:hover {
+				animation-play-state: paused;
+                color:green;
+            }
+		
+		@keyframes switchcolor {
+			0% {
+				color: mediumpurple;
+				border-color: mediumpurple;
+			}
+			50% {
+				color:red;
+				border-color: red;
+			}
+			100% {
+				color: mediumpurple;
+				border-color: mediumpurple;
+			}
+		}
+	</style>
+  </head>
+  <body style="text-align: center; margin: 0px; background-color: black;">
+    <canvas id="unity-canvas" style="width: 100%; height: auto; background: #231F20"></canvas>
+    <script src="../BuildWD/WETDREAMS_build.loader.js"></script>
+    <script>
+		if (screen.width <= 699) {
+        	document.location = "https://nielsgercama.com/mobile/wetdreams";
+        }
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "../BuildWD/WETDREAMS_build.data",
+        frameworkUrl: "../BuildWD/WETDREAMS_build.framework.js",
+        codeUrl: "../BuildWD/WETDREAMS_build.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Niels_Gercama",
+        productName: "WetDreams",
+        productVersion: "0.1",
+      });
+    </script>
+	<div class="bar">
+		<img src="Media/Misc/logo.gif" class="logo" />
+		<a href="."><p class="homebutton">NIELS GERCAMA &nbsp &nbsp | &nbsp &nbsp New Media</p></a>
+		<p class="homebutton" style="left:86%"><a href="mailto:nielsgercama@gmail.com" class="link">CONTACT</a> &nbsp &nbsp | &nbsp &nbsp <a href="https://www.instagram.com/niels_gercama/?hl=nl" class="link"> @niels_gercama </a></p>
+
+		</div>
+	  
+	  <a href="."><p class="switch">SWITCH TO PORTFOLIO</p></a>
+	  <p class="copyright">&copy; copyright by Niels Gercama</p>
+  </body>
+</html>

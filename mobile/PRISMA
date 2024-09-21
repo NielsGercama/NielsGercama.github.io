@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Niels Gercama | PRISMA</title>
+		<script>
+			if (screen.width > 699) {
+				document.location = "https://nielsgercama.com/PRISMA";
+			}
+		</script>
+		<style>
+			a {
+				font-size:60px;
+				font-family:arial;
+				position:fixed;
+				top:25%;
+				left:5%;
+				color:black;
+			}
+			
+			a:selected, a:active {
+				color:black;
+			}
+		</style>
+	</head>
+	<body>
+		<p>The page documenting this project is currently only availble on PC.</p>
+	</body>
+</html>
