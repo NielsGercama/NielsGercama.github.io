@@ -11,11 +11,11 @@ def tree(dir, ext):
     
     return files
 
-ext = "mp4"
+ext = "2mp4"
 results = tree(os.getcwd(), ext)
 for r in results:
     print(r)
-    r2 = f'{".".join(r.split(".")[:-1])}.2mp4'
+    r2 = f'{".".join(r.split(".")[:-1])}.mp4'
     os.rename(r, r2)
     print(r2)
 
