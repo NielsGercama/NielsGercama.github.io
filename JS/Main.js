@@ -121,7 +121,7 @@ function load_about() {
 	const profilePic = document.createElement("img");
 	profilePic.className = "description";
 	profilePic.src = "Media/Misc/me.jpg";
-	Folder.appendChild(profilePic);
+	//Folder.appendChild(profilePic);
 	
 	const textContainer = document.createElement("div");
 	textContainer.className = "image";
@@ -188,6 +188,57 @@ function load_about() {
 	document.body.appendChild(Folder);
 }
 
+var arrowsn = 0;
+var counter = 20;
+var mult=1.1;
+var weird = function() {
+	
+	if (counter > 550) {
+		mult=1/mult;
+	} else if (counter < 20) {
+		mult=1/mult;
+	}
+
+	counter *= mult;
+	
+	if (arrowsn >= 50) {
+		arrowsn = 0;
+	} else {
+		arrowsn += 1;
+	}
+
+	document.getElementById("landingarrow").innerHTML = "&#129095<br>".repeat(arrowsn);
+	setTimeout(weird, counter);
+}
+
+function load_landing_page() {
+	setTimeout(function() {
+		document.getElementById('bar').style.top = 0;
+	}, 500);
+
+	setTimeout(function() {
+		document.getElementById('landingtitle').style.opacity = 1;
+	}, 1000);
+
+	
+	// setTimeout(function() {
+	// 	setInterval(updateArrows, 50)
+	// }, 2000);
+
+	
+	setTimeout(function() {
+		setTimeout(weird, counter);
+	}, 2000);
+
+
+}
+
+function randomizeCursor() {
+	const cursorstyles = ["alias", "all-scroll", "auto", "crosshair"]
+	document.body.style.cursor = cursorstyles[Math.floor(Math.random() * cursorstyles.length)];
+}
+
+
 function load_page() {
 	load_index_container();
 		
@@ -196,6 +247,10 @@ function load_page() {
 	for (var i = 0; i < Projects.length; i++) {
 		load_folder(Projects[i])
 	}	
+
+	load_landing_page();
+
+	//window.onscroll = function() {randomizeCursor()};
 }
 
 
@@ -464,3 +519,8 @@ function load_mobile_page() {
 	
 	document.body.appendChild(mobileContainer);
 }
+
+
+
+
+

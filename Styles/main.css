@@ -1,11 +1,69 @@
 .bar {
     background: black;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s; /* Safari */
     position: fixed;
-    top: 0;
+    top: -50px;
     left: 0;
     width: 100%;
     height: 50px;
     border: 1px white;
+}
+
+.landing {
+    background-color: white;
+    height:auto;
+    width:100%;
+    aspect-ratio: 16/9;
+    position:absolute;
+    left:0;
+    top:0;
+    margin:0;
+    -webkit-mask-image: url('/voronoimask.png');
+}
+
+.landingtitle {
+    opacity: 0;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s; /* Safari */
+    bottom:-10%;
+    left:5%;
+    font-size:400px;
+    position:absolute;
+    color:aliceblue;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 1);
+
+}
+
+.landingarrow {
+    font-size:20px;
+    right:5%;
+    top:-10%;
+    color:aliceblue;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 1);
+    position:absolute;
+}
+
+.blurbottom {
+    position: fixed;
+    bottom: 0;
+    height: 15%;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    -webkit-mask: linear-gradient(to bottom, transparent 0%, white 100%);
+    pointer-events: none;
+}
+
+.blurtop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 10%;
+    width: 100%;
+    backdrop-filter: blur(6px);
+    -webkit-mask: linear-gradient(to top, transparent 0%, white 100%);
+    pointer-events: none;
 }
 
 .logo {
