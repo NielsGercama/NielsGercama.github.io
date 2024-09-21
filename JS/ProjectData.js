@@ -28,11 +28,11 @@ const Projects = [
 		indexlabel: "SOX",
 		year: 2024,
 		description: "<strong>Shown at <i>SOX Gallery</i> in Berlin, DE (June 2024)</strong><br/><br/>Created in collaboration with Amel Baccouche.<br/><br/><em>A Young Vivacious Woman Named AriaAccademia</em> was a single-channel video installation featuring a fictional flat white index for gentrification, Bach's Coffee Cantata, plastic ice cubes and stage equipment.",
-		imageSources: 	[	"Media/Projects/SOX/s1.JPG",
-							"Media/Projects/SOX/s2.JPG",
-							"Media/Projects/SOX/s3.JPG",
-							"Media/Projects/SOX/s4.JPG",
-							"Media/Projects/SOX/s5.JPG"],
+		imageSources: 	[	"Media/Projects/SOX/s1.jpg",
+							"Media/Projects/SOX/s2.jpg",
+							"Media/Projects/SOX/s3.jpg",
+							"Media/Projects/SOX/s4.jpg",
+							"Media/Projects/SOX/s5.jpg"],
 		imageSpans: 	[	"<em>A Young Vivacious Woman Named AriaAccademia</em> [2024]. SOX, Berlin",
 							"<em>A Young Vivacious Woman Named AriaAccademia</em> [2024]. SOX, Berlin",
 							"<em>A Young Vivacious Woman Named AriaAccademia</em> [2024]. SOX, Berlin",
@@ -97,12 +97,12 @@ const Projects = [
 		year: 2024,
 		description: 'Multi-channel installation created for the <strong>Lange Nacht der Wissenschaften</strong> in Berlin.<br><br>Together with Keny Chan, we researched possible methods to encounter links between data scraped from OSINT groups on Telegram, geo-political conflict areas and the production of GPUs. In an attempt to draw together the root, product and consumer position of the GPU supply chain we juxtaposed the gathered data with AI-generated characters. Images collected during this research were shown in this installation as Captcha tiles. In order to solve Captchas, the audience was allowed only to blink into the camera while being reminded of their inability to do otherwise.',
 		imageSources: 	[	
-							"Media/Projects/Driver/d0.JPG",
-							"Media/Projects/Driver/d2.JPG",
-							"Media/Projects/Driver/d3.JPG",
-							"Media/Projects/Driver/d4.JPG",
-							"Media/Projects/Driver/d5.JPG",
-							"Media/Projects/Driver/d6.JPG"],
+							"Media/Projects/Driver/d0.jpg",
+							"Media/Projects/Driver/d2.jpg",
+							"Media/Projects/Driver/d3.jpg",
+							"Media/Projects/Driver/d4.jpg",
+							"Media/Projects/Driver/d5.jpg",
+							"Media/Projects/Driver/d6.jpg"],
 		
 		imageSpans: 	[	"<em>Backseat To Drivers</em> [2024]",
 							"<em>Backseat To Drivers</em> [2024]",
@@ -112,8 +112,8 @@ const Projects = [
 						 	"<em>Backseat To Drivers</em> [2024]",
 						 	"<em>Backseat To Drivers</em> [2024]"
 						],
-		videoSources:	["Media/Projects/Driver/dvideo1.MP4"],
-		videoPosters:	["Media/Projects/Driver/d1.JPG"]
+		videoSources:	["Media/Projects/Driver/dvideo1.mp4"],
+		videoPosters:	["Media/Projects/Driver/d1.jpg"]
 	},
 	
 	{
