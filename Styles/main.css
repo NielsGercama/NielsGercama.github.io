@@ -19,7 +19,10 @@
     left:0;
     top:0;
     margin:0;
-    -webkit-mask-image: image(url('https://NielsGercama.github.io/voronoimask.png'));
+    mask-repeat: no-repeat;
+    mask-size: 100%;
+    -webkit-mask-image: url('https://NielsGercama.github.io/voronoimask.png');
+    mask-image: url('https://NielsGercama.github.io/voronoimask.png');
 }
 
 .landingtitle {
