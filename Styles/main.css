@@ -19,17 +19,13 @@
     left:0;
     top:0;
     margin:0;
-    mask-repeat: no-repeat;
-    mask-size: 100%;
-    -webkit-mask-image: url('https://NielsGercama.github.io/voronoimask.png');
-    mask-image: url('https://NielsGercama.github.io/voronoimask.png');
 }
 
 .landingtitle {
     opacity: 0;
     transition: opacity 1s;
     -webkit-transition: opacity 1s; /* Safari */
-    bottom:-10%;
+    bottom:-7%;
     left:5%;
     font-size:400px;
     position:absolute;
@@ -127,9 +123,14 @@
 .indexYear {
     position: relative;
     left: 0;
+    width:20%;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size:15px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin:0;
+    padding:0;
 }
 
 
@@ -186,7 +187,7 @@ span {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
+    font-size: 40px;
 }
 
 ::selection {

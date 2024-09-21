@@ -22,7 +22,7 @@ function folder_to(idx) {
 	}
 	elements[idx].style.opacity=1;
 
-	window.scrollTo({top: 0})
+	window.scrollTo({top: 1200})
 }
 
 
