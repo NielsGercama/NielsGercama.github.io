@@ -36,6 +36,7 @@ function load_index_container() {
 	
 	const index_container = document.createElement("div");
 	index_container.className = "index_container";
+	index_container.id = "index_container";
 	
 
 	const indexList = [];
@@ -81,6 +82,7 @@ function load_folder(Project) {
 	
 	const Description = document.createElement("p");
 	Description.className = "description";
+	Description.id = "description";
 		
 	Description.innerHTML = "<i><strong>" + Project.title + "</strong> [" + Project.year + "]</i> <br/><br/>" + Project.description;
 	Folder.appendChild(Description);
@@ -192,7 +194,6 @@ var arrowsn = 0;
 var counter = 20;
 var mult=1.1;
 var weird = function() {
-	
 	if (counter > 550) {
 		mult=1/mult;
 	} else if (counter < 20) {
@@ -230,6 +231,10 @@ function load_landing_page() {
 		setTimeout(weird, counter);
 	}, 2000);
 
+	setTimeout(function() {
+		document.getElementById('landingvideo').style.opacity=0.75;
+	}, 1000)
+
 
 }
 
@@ -238,8 +243,39 @@ function randomizeCursor() {
 	document.body.style.cursor = cursorstyles[Math.floor(Math.random() * cursorstyles.length)];
 }
 
+function clamp(num, lower=0, upper=1) {
+	return Math.min(Math.max(num, lower), upper);
+}
+
+function norm(num, lower, upper) {
+    return clamp((num - lower) / (upper - lower));
+}
+
 
 function load_page() {
+	const cursor = document.createElement("cursor");
+	cursor.id = "cursor";
+	cursor.className = "cursor";
+	document.body.addEventListener("mousemove", function(e) {
+	cursor.style.left = e.clientX + "px",
+		cursor.style.top = e.clientY + "px";
+	});
+	document.body.appendChild(cursor);
+
+	document.onreadystatechange = function () {
+		if (document.readyState !== "complete") {
+			document.querySelector(
+				"body").style.visibility = "hidden";
+			document.querySelector(
+				"#cursor").style.visibility = "visible";
+		} else {
+			document.querySelector(
+				"body").style.visibility = "visible";
+		}
+	};
+
+	load_landing_page();
+
 	load_index_container();
 		
 	load_about();
@@ -248,7 +284,24 @@ function load_page() {
 		load_folder(Projects[i])
 	}	
 
-	load_landing_page();
+	
+
+
+	
+
+	// window.onscroll = function() {
+	// 	const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+	// 	console.log("hh");
+	// 	console.log(scrollTop);
+	// 	const indexOpacity = norm(scrollTop, 750, 1200);
+	// 	document.getElementById("index_container").style.opacity=indexOpacity;
+	// 	document.getElementById("description").style.opacity=indexOpacity;
+
+	// 	const cursorOpacity = 1 - norm(scrollTop, 600, 750);
+	// 	console.log(cursorOpacity);
+
+	// 	document.getElementById("cursor").style.opacity = cursorOpacity;
+	// }
 
 	//window.onscroll = function() {randomizeCursor()};
 }
