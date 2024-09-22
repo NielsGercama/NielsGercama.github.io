@@ -1,3 +1,7 @@
+html {
+    cursor:none;
+}
+
 .bar {
     background: black;
     transition: top 0.5s;
@@ -15,12 +19,13 @@
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%);
     pointer-events: none;
-    left: -100px;
+    left: 0px;
     top: 50%;
     mix-blend-mode: difference;
     background-color: transparent;
     z-index: 999;
-    border: 3px solid white;
+    border: 2px solid greenyellow;
+    backdrop-filter: blur(6px);
     height: 100px;
     width: 100px;
     transition: all 300ms ease-out;
@@ -36,7 +41,6 @@
     left:0;
     top:0;
     margin:0;
-    cursor:none;
 }  
 
 #landingvideo {
