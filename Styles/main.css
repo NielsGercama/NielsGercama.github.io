@@ -2,6 +2,11 @@ html {
     cursor:none;
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+  }
+
 .bar {
     background: black;
     transition: top 0.5s;
@@ -14,22 +19,48 @@ html {
     border: 1px white;
 }
 
+
+
 #cursor {
-    position: fixed;
-    border-radius: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    position:fixed;
+    z-index: 999;
     pointer-events: none;
+    /* transform: translateX(-50%) translateY(-50%); */
+    
+    border: 3px dotted greenyellow;
+    border-radius: 50%;
+    /* border-top: 12px dotted #ff0000; */
+
+    width: 100px;
+    height: 100px;
     left: 0px;
     top: 50%;
+    
     mix-blend-mode: difference;
     background-color: transparent;
-    z-index: 999;
-    border: 2px solid greenyellow;
-    backdrop-filter: blur(6px);
-    height: 100px;
-    width: 100px;
+    animation: spin 2s linear infinite;
     transition: all 300ms ease-out;
-  }
+    backdrop-filter: blur(6px);
+}
+
+@keyframes spin {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+    opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        transform: rotate(360deg);
+    }
+}
+
+#cursorText {
+    color:red;
+    font-size:12px;
+}
+
   
 
 #landing {
@@ -124,17 +155,24 @@ html {
     color: white;
 }
 
+a:-webkit-any-link {
+    cursor:none;
+}
+
 .link {
     text-decoration: none;
     color: white;
+    cursor:none;
 }
 
     .link:visited, .link:link, .link:active {
         color: white;
+        cursor:none;
     }
 
     .link:hover {
         color: darkgray;
+        cursor:none;
     }
 
 .index_container {
@@ -155,6 +193,7 @@ html {
 
 .indexYear {
     position: relative;
+    text-align:center;
     left: 0;
     width:20%;
     color: black;
