@@ -66,6 +66,8 @@ body {
   width:60%;
   height:auto;
   cursor:none;
+  transition:opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
 }
 
     #folder .image {
