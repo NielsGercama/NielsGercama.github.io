@@ -66,8 +66,6 @@ body {
   width:60%;
   height:auto;
   cursor:none;
-  transition:opacity 0.5s;
-  -webkit-transition: opacity 0.5s;
 }
 
     #folder .image {
@@ -77,6 +75,10 @@ body {
         width:98%;
         height:auto;
         margin-top:20px;
+        transition:opacity 0.5s;
+        -webkit-transition: opacity 0.5s;
+        opacity:1;
+        animation: shimmer 2s linear infinite;
     }
 
     #folder .imagelabel {
@@ -277,19 +279,6 @@ body {
     backdrop-filter: blur(6px);
 }
 
-@keyframes spin {
-    0% {
-        opacity: 0%;
-    }
-    50% {
-    opacity: 100%;
-    }
-    100% {
-        opacity: 0%;
-        transform: rotate(360deg);
-    }
-}
-
 #blurbottom {
     position: fixed;
     bottom: 0;
@@ -310,5 +299,31 @@ body {
     backdrop-filter: blur(6px);
     -webkit-mask: linear-gradient(to top, transparent 0%, white 100%);
     pointer-events: none;
+}
+
+@keyframes shimmer {
+    0% {
+      opacity: 0%;
+    }
+    50% {
+      opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+  }
+  
+
+@keyframes spin {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+    opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+        transform: rotate(360deg);
+    }
 }
 

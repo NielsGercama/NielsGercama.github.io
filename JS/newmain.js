@@ -116,7 +116,7 @@ function load_folder(title) {
     clear_folder();
 
     folder.appendChild(createWhitespace());
-    folder.scrollIntoView({ behavior: "smooth"});
+    
 
     load_description(title);
 
@@ -126,16 +126,17 @@ function load_folder(title) {
             label.innerHTML = projectData.imageSpans[i]
             label.className = "imagelabel";
 
-            folder.appendChild(createImage(src, "image"));
+            img = createImage(src, "image");
+            //img.style.opacity=0;
+            img.onload = function() {this.style.animation = "none"};
+            folder.appendChild(img);
             folder.appendChild(label);
         }
     }
 
     folder.appendChild(createWhitespace());
-
     
-
-    
+    folder.scrollIntoView({ behavior: "smooth"});
 }
 
 // Loads the "About" section of the page
@@ -336,15 +337,17 @@ function load_page() {
         repositionCursor(mouseX, mouseY);
     };
 
-    folder = document.getElementById("folder");
-    folder.onreadystatechange = function() {
-        if (document.readyState !== "complete") {
-            folder.style.opacity = 0;
-        } else {
-            setTimeout(() => {
-                folder.style.opacity = 1;
-            }, 500);
-    }
-};
-
+    // folder = document.getElementById("folder");
+    // console.log(folder);
+    //folder.onreadystatechange = e => {console.log(e)}
+    //     if (folder.readyState !== "complete") {
+    //         folder.style.opacity = 0;
+    //         console.log("ok");
+    //     } else {
+    //         setTimeout(() => {
+    //             folder.style.opacity = 1;
+    //             console.log("ok");
+    //         }, 500);
+    //     }
+    // };
 }
