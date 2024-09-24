@@ -1,9 +1,8 @@
-const Projects = [
-	{
-		title: "UNHINGED",
-		indexlabel: "UNHINGED",
+const Projects = {
+	"UNHINGED" : {
+        title:"UNHINGED",
 		year: 2024,
-		description: '<strong>Shown at <i>Treehouse NDSM</i> in Amsterdam, NL (April 2024)</strong><br/><br/>Created in collaboration with Jason Clark.<br/><br/><em>A Friend To The Cyborgian Echo</em> is an event series investigating the structural violence of AI hidden in SafeTensor noise.<br><br><a href="https://youtu.be/BZIFLdXaJcY">More information here.</a><br><br><a href="https://youtu.be/Bx3O0N2nXcs">Documentation of its performance night can be found here.</a><br><br>This iteration was funded by the Amsterdam Fonds voor de Kunst (AfK).',
+		description: '<strong>Shown at <i>Treehouse NDSM</i> in Amsterdam, NL (April 2024)</strong><br/><br/>Created in collaboration with Jason Clark.<br/><br/><em>A Friend To The Cyborgian Echo</em> is an event series investigating the structural violence of AI hidden in SafeTensor noise.<br><br>This iteration was funded by the Amsterdam Fonds voor de Kunst (AfK).',
 		imageSources: 	[	"Media/Projects/UNHINGED/u3.jpg",
 							"Media/Projects/UNHINGED/u1.jpg",
 							"Media/Projects/UNHINGED/u5.jpg",
@@ -20,12 +19,16 @@ const Projects = [
 							"<em>UNHINGED</em> [2024]. Treehouse NDSM, Amsterdam"],
 		videoSources:	[],
 		videoPosters:	[],
-		ytsources: ["https://youtu.be/BZIFLdXaJcY"]
+		ytsources: ["https://youtu.be/BZIFLdXaJcY"],
+		links: {		"UNHINGED video essay":"https://youtu.be/BZIFLdXaJcY",
+						"Performance night documentation":"https://youtu.be/Bx3O0N2nXcs"},
+		logos: {	"afk" : "https://www.amsterdamsfondsvoordekunst.nl/", 
+					"treehousendsm" : "https://www.treehousendsm.com/",
+					"infinia" : "https://infinia.com.tr/en"}
 	},
 	
-	{
-		title: "SOX",
-		indexlabel: "SOX",
+	"SOX" : {
+        title:"SOX",
 		year: 2024,
 		description: "<strong>Shown at <i>SOX Gallery</i> in Berlin, DE (June 2024)</strong><br/><br/>Created in collaboration with Amel Baccouche.<br/><br/><em>A Young Vivacious Woman Named AriaAccademia</em> was a single-channel video installation featuring a fictional flat white index for gentrification, Bach's Coffee Cantata, plastic ice cubes and stage equipment.",
 		imageSources: 	[	"Media/Projects/SOX/s1.jpg",
@@ -39,14 +42,14 @@ const Projects = [
 							"<em>A Young Vivacious Woman Named AriaAccademia</em> [2024]. SOX, Berlin",
 							"<em>A Young Vivacious Woman Named AriaAccademia</em> [2024]. SOX, Berlin"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links : {"SOX Gallery":"https://www.sox-berlin.com/"}
 	},
 	
-	{
-		title: "Neuk&oumllln Spiderman",
-		indexlabel: "Neuk&oumllln Spiderman",
+	"Neukölln Spiderman" : {
+        title:"Neukölln Spiderman",
 		year: 2024,
-		description: "<strong>Created for <i>Converse Turkey</i> under direction of Altay Erlik</strong>.<br/><br/><a href='https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman'>Premiered August 2024 at <i>Salt Beyoğlu</i> in Istanbul</a><br/><br/>Created in collaboration with Altay Erlik and Sinan Ilmaz.<br/><br/><em>Neuk&oumllln Spiderman</em> is a mixed-media documentary film questioning belonging, death, an intergenerational journey of migration to Berlin and characters along the way. Director Altay Erlik explores these issues through interviews with the original Neuk&oumllln Spiderman, a homeless vigilante living on the streets of Berlin. Spiderman's memories and stories are illustrated using custom Artificial Intelligence tools for animation by Niels Gercama and colorful, intimate 2D animation by Sinan Ilmaz. ",
+		description: "<strong>Created for <i>Converse Turkey</i> under direction of Altay Erlik</strong>.<br/><br/>Created in collaboration with Altay Erlik and Sinan Ilmaz.<br/><br/><em>Neuk&oumllln Spiderman</em> is a mixed-media documentary film questioning belonging, death, an intergenerational journey of migration to Berlin and characters along the way. Director Altay Erlik explores these issues through interviews with the original Neuk&oumllln Spiderman, a homeless vigilante living on the streets of Berlin. Spiderman's memories and stories are illustrated using custom Artificial Intelligence tools for animation by Niels Gercama and colorful, intimate 2D animation by Sinan Ilmaz.",
 		imageSources: 	[	"Media/Projects/NKSpiderman/nks1.jpg",
 							"Media/Projects/NKSpiderman/nks5.jpg",
 							"Media/Projects/NKSpiderman/nks3.jpg",
@@ -61,12 +64,18 @@ const Projects = [
 						 	"<em>Neuk&oumllln Spiderman</em> [2024]. Still"
 						],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links: {
+			"Premiered August 2024 at <i>Salt Beyoğlu</i> in Istanbul":"https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman"
+		},
+		logos:	{
+			"converse" : "https://www.converse.com/de/en/landing-all-stars",
+			"salt" : "https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman"
+		}
 	},
 	
-	{
-		title: "UNIVERSAL JOY",
-		indexlabel: "UNIVERSAL JOY",
+	"UNIVERSAL JOY" : {
+        title:"UNIVERSAL JOY",
 		year: 2024,
 		description: 'In October 2023 I was commissioned by the Van Gogh Museum to create a live artificial intelligence installation, reimagining a live feed of museum visitors in the style of Van Gogh. The tools I developed for this commission were successively used under a larger umbrella project named Universal Joy, a studio for novel animation techniques at the intersection of classical 3D animation, real-time engines, Artificial Intelligence for video-to-video and deep faking / reenactment, etc. The Universit&aumlt der K&uumlnste Berlin hired me on an honorary basis to teach the technical development and ethical considerations of using AI in design for the Fashion Department at the Medienhaus during the 2024 summer semester.',
 		imageSources: 	[	"Media/Projects/UniversalJoy/uj1.jpg",
@@ -88,12 +97,15 @@ const Projects = [
 							"<em>UNIVERSAL JOY</em> [2024]. Fashion Dep. student final project (Mila Dormeier)",
 							"<em>UNIVERSAL JOY</em> [2024]. Fashion Dep. student final project (Aim&#233e Gr&uumlnewald)"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		logos: {	"vangoghmuseum":"https://www.vangoghmuseum.nl/en",
+					"udk":"https://www.udk-berlin.de/universitaet/"
+		},
+		links : {"Shaping Generative AI - UdK Fashion Department":"https://www.udk-berlin.de/studium/studium-generale/kurse-courses/studentische-initiativen-kooperationen-sose-2024/shaping-generative-ai-couturing-generative-ai-fashioning-generative-ai/"}
 	},
 	
-	{
-		title: "Backseat To Drivers",
-		indexlabel: "Backseat To Drivers",
+	"Backseat To Drivers" : {
+        title: "Backseat To Drivers",
 		year: 2024,
 		description: 'Multi-channel installation created for the <strong>Lange Nacht der Wissenschaften</strong> in Berlin.<br><br>Together with Keny Chan, we researched possible methods to encounter links between data scraped from OSINT groups on Telegram, geo-political conflict areas and the production of GPUs. In an attempt to draw together the root, product and consumer position of the GPU supply chain we juxtaposed the gathered data with AI-generated characters. Images collected during this research were shown in this installation as Captcha tiles. In order to solve Captchas, the audience was allowed only to blink into the camera while being reminded of their inability to do otherwise.',
 		imageSources: 	[	
@@ -113,14 +125,16 @@ const Projects = [
 						 	"<em>Backseat To Drivers</em> [2024]"
 						],
 		videoSources:	["Media/Projects/Driver/dvideo1.mp4"],
-		videoPosters:	["Media/Projects/Driver/d1.jpg"]
+		videoPosters:	["Media/Projects/Driver/d1.jpg"],
+		logos:	{	"lndw":"https://www.langenachtderwissenschaften.de/",
+					"newpractice":"https://www.newpractice.net/"
+		}
 	},
 	
-	{
+	"X Siempre" : {
 		title: "X Siempre",
-		indexlabel: "X Siempre",
 		year: 2023,
-		description: '<strong>Shown at <i>Design Museum Den Bosch</i> in Den Bosch, NL (Spring 2023, extended through Summer 2023)</strong><br/><br/>Created in collaboration with Giuliano Bolivar.<br/><br/><em>X Siempre</em> is a single channel video animating reimaginations of tribal-tattoo design in a setting of virtual intimacy.<br><br><a href="https://designmuseum.nl/en/tentoonstelling/post-tribal/">Post-Tribal Exhibition Info.</a><br><br><a href="https://youtu.be/4q1XZknTEs8">Full video link.</a>',
+		description: '<strong>Shown at <i>Design Museum Den Bosch</i> in Den Bosch, NL (Spring 2023, extended through Summer 2023)</strong><br/><br/>Created in collaboration with Giuliano Bolivar.<br/><br/><em>X Siempre</em> is a single channel video animating reimaginations of tribal-tattoo design in a setting of virtual intimacy.',
 		imageSources: 	[	"Media/Projects/XSiempre/x1.jpg",
 						 	"Media/Projects/XSiempre/x2.jpg",
 							"Media/Projects/XSiempre/x3.jpg",
@@ -130,12 +144,15 @@ const Projects = [
 							"<em>Post-Tribal opening impressions</em> [2023]. Design Museum Den Bosch, 2023",
 							"<em>Speech by Giuliano Bolivar</em> [2023]. Design Museum Den Bosch, 2023"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{	"Post-Tribal Exhibition":"https://designmuseum.nl/en/tentoonstelling/post-tribal/",
+				"X Siempre (2023)":"https://youtu.be/4q1XZknTEs8"
+		},
+		logos: {"dmdb":"https://designmuseum.nl/en/homepage/"}
 	},
 	
-	{
+	"Sheraton-Intel" : {
 		title: "Sheraton-Intel",
-		indexlabel: "Sheraton-Intel",
 		year: 2023,
 		description: "<strong>Shown at <i>Taca Studio</i> for the exhibition <i>A Place I Can't Call Home</i> in Palma de Mallorca, ES (July 2023)</strong><br/><br/>Curated by Elena Sohmen.<br/><br/><em>In Commemoration Of The 2023 Sheraton-Intel Merger</em> was a design fiction featuring two IKEA mirrors (sanded), Blood-infused gelatine pearls, 3D printed deal toys and smart fluid controlled via Arduino.<br><br>&quot;Presented here are the suitable outlines for a memorandum to be placed on a plaque, to be handed to investors, the board, major shareholders, the director of the M&A consultancy, their partner, the tax write-off charity, the bank’s representative. A plaque outside of planned obsolescence, a moment of mutual interest and successful financial interaction etched in glass and steel. They are commonly called Tombstones or Deal Toys - in commemoration of the 2023 Sheraton-Intel Merger. A merger which takes place now in a concurrent fiction, some may-as-well time with three may-as-well Deal Toys. A unique collectable set of OTPPs (One-Time Password Pearls); a lucite soap dispenser knock-off; The New Age (f. MasterCard).&quot;",
 		imageSources: 	[	"Media/Projects/SheratonIntel/1.jpg",
@@ -158,9 +175,8 @@ const Projects = [
 		videoPosters:	[]
 	},
 	
-	{
+	"A Friend To The Cyborgian Echo" : {
 		title: "A Friend To The Cyborgian Echo",
-		indexlabel: "A Friend To The Cyborgian Echo",
 		year: 2023,
 		description: '<strong>Shown at <i>Prisma Estudio</i> in Lisbon, PT (September 2023)</strong><br/><br/>Created in collaboration with Jason Clark.<br/><br/><em>A Friend To The Cyborgian Echo</em> is an interactive sonic installation, investigating the structural violence of AI hidden in SafeTensor noise.<br><br><a href="https://youtu.be/cn-Wq1UmBL8">More information here.</a><br><br>This project was funded by the Culture Moves Europe Fund (European Union, implemented by the Goethe Institute).',
 		imageSources: 	[	"Media/Projects/AFriendToTheCyborgianEcho/HorizontalPoster.jpg",
@@ -179,9 +195,8 @@ const Projects = [
 		videoPosters:	[]
 	},
 	
-	{
+	"We All Scream For Ice Cream!" : {
 		title: "We All Scream For Ice Cream!",
-		indexlabel: "We All Scream For Ice Cream!",
 		year: 2023,
 		description: "<strong>Shown at the <i>CTM / Transmediale Vorspiel</i> (February 2023) and at <i>MANIFEST:IO: The Symposium for New Media and Electronic Art</i> (February 2023)</strong><br/><br/> Created in collaboration with Jason Clark.<br><br> In Jim Jarmusch' seminal film " + '"Down By Law" three prisoners, in a momentary lapse of reason speaking in Babylonian tongues, form a bond over repeating the phrase "I scream, you scream, we all scream for ice cream!". Ice cream, its figure in advertising and screaming children running to gather around the ice cream truck produce a sense of community, all to a recognizable dinky tune. In Taiwan. this moment is reproduced in the management of waste: rather than the indiscriminate beep-beep hidden by the morning fog, Taiwanese garbage trucks ring with beautiful simple melodies, letting people know it is time to gather and dispose of their communal waste. Meanwhile, as internet platforms wage war over dominance of the access portal, we find ourselves as prisoners stuck conversing from bubbles, doomscrolling in the prison of internet noise - down by law. We all scream for ice cream! explores the ice-cream model of Taiwanese waste management and the ethereal apparition of community amidst the access portal war. As an audiovisual installation, it combines found social media footage, waste and prison material to communicate the proposed narrative.',
 		imageSources: 	[	"Media/Projects/WeAllScreamForIceCream/WeAllScreamForIceCream_1.jpg",
@@ -219,9 +234,8 @@ const Projects = [
 	
 	
 	
-	{
+	"Desired Commodities" : {
 		title: "Desired Commodities",
-		indexlabel: "Desired Commodities",
 		year: 2022,
 		description: '<em>Desired Commodities</em> observes deceptive design and the generation of identity in hypermarketing, using IKEA as a case and terrain for intervention. Shown is the prototype for a ' + "Non-Prescriptive Object" + ' - an object that does not prescribe identity. For more information on the project see:<br/><br/><a href="https://nielsgercama.com/desiredcommodities">https://nielsgercama.com/desiredcommodities</a>',
 		imageSources:	[ 	"Media/Projects/DesiredCommodities/DesiredCommodities_1.jpg",
@@ -236,9 +250,8 @@ const Projects = [
 		videoPosters:	[]
 	},
 	
-	{
+	"Plastocene" : {
 		title: "Plastocene",
-		indexlabel: "Plastocene",
 		year: 2022,
 		description: "New media installation. Photographs by Sam Ten Thij.<br/><br/>Silicone, steel, polycarbonate, mixed media",
 		imageSources:	[ 	"Media/Projects/Plastocene/Plastocene_1.jpg",
@@ -275,9 +288,8 @@ const Projects = [
 		videoPosters:	[]
 	},*/
 	
-	{
+	"Carousel" : {
 		title: "Carousel",
-		indexlabel: "Carousel",
 		year: 2022,
 		description: "<em><strong>Carousel</strong></em> is a holographic projection, depicting tattoo designs by Giuliano Bolivar on an animated carousel.<br/><br/>Shown at the Apelbaum03 group exhibit at Art Club Anomalie <br/> ['Queering the Gallery Week' April 2022].<br/><br/> Collaborative work with Giuliano Bolivar. Sound by Jason Andrew Clark.",
 		imageSources:	[ 	"Media/Projects/Carousel/Carousel_2.jpg",
@@ -299,9 +311,8 @@ const Projects = [
 		videoPosters:	[	"Media/Projects/ClickWorkDrop/ClickWorkDrop_VideoPoster_1.jpg"]
 	},*/
 	
-	{
+	"The Joy Of Marketing" : {
 		title: "The Joy Of Marketing",
-		indexlabel: "The Joy Of Marketing",
 		year: 2021,
 		description: '<em><strong>Ibuprofen</strong></em> [2022]<br><br><i>Published by <br/><strong>Yes The Void</strong> (2021), <br/> <strong>Simulacrum Magazine</strong> (2022)<br> and <strong>Arts Of The Working Class</strong> (2022)</i> <br><br> <em><strong>The Joy Of Marketing II: Ibuprofen</strong></em> is an illustrated text, combining digital media with storytelling.<br><br><i>Part of the Apelbaum02 Open Call<br><strong>Art Club Anomalie</strong>, Berlin (2021)</i> <br><br> <em><strong>The Joy of Marketing (1)</strong></em> is a ~7 min. animated loop, exploring the body and its relationship to marketing strategies. <br><br> <i>The Joy of Marketing (1)</i> was made in collaboration with <a href="https://www.instagram.com/giulianobolivar/">Giuliano Bolivar</a>, who designed the tattoos coded upon the animated bodies. <br><br><a href="https://ra.co/events/1480478">(Old) event link</a><br><br><a href="https://www.instagram.com/p/CW3Rsrso2Ly/?utm_source=ig_web_copy_link">Promotional video</a>',
 		imageSources:	[ 	"Media/Projects/TheJoyOfMarketingII/TheJoyOfMarketingII_1.jpg",
@@ -320,9 +331,8 @@ const Projects = [
 		videoPosters:	[]
 	},
 	
-	{
+	"Machine Gun Fairies"  : {
 		title: "Machine Gun Fairies",
-		indexlabel: "Machine Gun Fairies",
 		year: 2021,
 		description: '<em><strong>Machine Gun Fairies</strong></em>: Art direction and teaser video for <i>Interior Design</i>, an experimental music outfit from Amsterdam. <br><br>Full video available <a href="https://www.instagram.com/p/CXbE2TPooVW/">here</a>.',
 		imageSources:	[ 	"Media/Projects/MachineGunFairies/MachineGunFairies_1.jpg",
@@ -341,9 +351,8 @@ const Projects = [
 	
 	
 	
-	{
+	"The Squares Have Taken Over" : {
 		title: "The Squares Have Taken Over",
-		indexlabel: "The Squares Have Taken Over",
 		year: 2020,
 		description: '<em><strong>The Squares Have Taken Over</strong></em> was an exhibition under the <em>the no thing</em> collective at autonomous cultural center <strong>De Vondelbunker</strong>.<br/><br/><i>Large paintings, AI-generated imagery, holographic video, sculptures</i><br><br>(Old) event link: <a href="https://radar.squat.net/nl/event/amsterdam/vondelbunker/2020-02-21/squares-have-taken-over-exhibition-party">radar.squat</a>',
 		imageSources:	[ 	"Media/Projects/TheSquaresHaveTakenOver/TheSquaresHaveTakenOver_1.jpg",
@@ -360,9 +369,8 @@ const Projects = [
 		videoPosters:	[]
 	},
 	
-	{
+	"Onomy Onome" : {
 		title: "Onomy Onome",
-		indexlabel: "Onomy Onome",
 		year: 2020,
 		description: '<em><strong>Onomy Onome</strong></em> is a ~40 min. film shot in 2020/21. Based on personal experience, <i>Onomy Onome</i> relays the abstracted events leading up to the rape of main character MICHELLE. I wrote, directed and made the animations for <em>Onomy Onome</em>. <br><br> This part animated, part live action film was conducted under the <em>the no thing</em> collective to be featured on a large scale UV-Crystalized display as a holographic image. Photos (3) and (4) were taken during a screening of <em>Onomy Onome</em>, capturing the effect of the holographic projection.<br><br><a href="https://youtu.be/gCL0XyOzTig"> A selection of footage is available here </a>',
 		imageSources:	[ 	"Media/Projects/OnomyOnome/OnomyOnome_1.jpg",
@@ -386,4 +394,4 @@ const Projects = [
 		videoSources:	[],
 		videoPosters:	[]
 	}
-]
+}

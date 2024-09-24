@@ -118,7 +118,7 @@ function load_folder(Project) {
         Folder.appendChild(spanDiv);
         Folder.appendChild(document.createElement("p"));
     });
-
+	
     document.body.appendChild(Folder);
 }
 
@@ -219,8 +219,10 @@ function load_page() {
 
     Projects.forEach(project => load_folder(project));
 
-    document.addEventListener("mousemove", e => mouseMoveFunction(e));
-	document.addEventListener("mousemove", e => repositionCursor(mouseX, mouseY));
+    document.addEventListener("mousemove", e => {
+        mouseMoveFunction(e),
+        repositionCursor(mouseX, mouseY)
+    });
 
     document.onreadystatechange = function() {
         const cursor = document.getElementById("cursor");
@@ -228,7 +230,7 @@ function load_page() {
             document.body.style.visibility = "hidden";
 			document.getElementById("landing").style.visibility = "visible";
             cursor.style.visibility = "visible";
-			document.body.className = "stop-scrolling";
+			document.body.style.overflow = "hidden";
         } else {
             setTimeout(() => {
                 document.querySelector("body").style.visibility = "visible";
