@@ -74,7 +74,7 @@ body {
         left:0%;
         width:100%;
         height:auto;
-        background-color: black;
+        background-color: lightgray;
         animation: shimmer 2s linear infinite;
         margin-top:20px;
     }
@@ -86,9 +86,7 @@ body {
         top:0;
         left:0;
         
-        transition:opacity 0.5s;
-        -webkit-transition: opacity 0.5s;
-        opacity:1;
+        opacity:0;
     }
 
     #folder .imagelabel {

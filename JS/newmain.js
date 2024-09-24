@@ -130,7 +130,12 @@ function load_folder(title) {
             imgcontainer.className = "imagecontainer";
             const img = createImage(src, "image");
             //img.style.opacity=0;
-            img.onload = function() {this.parentNode.style.animation = "none"; this.parentNode.style.backgroundColor="transparent";this.nextSibling.style.opacity=1;};
+            img.onload = function() {
+                this.parentNode.style.animation = "none";
+                this.parentNode.style.backgroundColor="transparent";
+                this.nextSibling.style.opacity=1;
+                this.style.opacity = 1;
+            };
             imgcontainer.appendChild(img);
             imgcontainer.appendChild(label);
             folder.appendChild(imgcontainer);
