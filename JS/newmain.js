@@ -30,9 +30,13 @@ function createImage(src, classname) {
     return img;
 }
 
-function createAnchor(innerhtml, href, classname) {
+function createAnchorInParagraph(anchortext, href, classname) {
+    return createParagraph("<a href=" + href + " class='" + classname +"'>" + anchortext + "</a>", classname);
+}
+
+function createAnchor(anchortext, href, classname) {
     a = document.createElement("a");
-    a.innerHTML = innerhtml;
+    a.innerHTML = anchortext;
     a.href = href;
     a.className = classname;
     return a;
@@ -83,17 +87,24 @@ function load_description(title) {
     if (projectData.links) {
         description.appendChild(createParagraph("Links", "header"));
         for (const [anchortext, href] of Object.entries(projectData.links)) {
-            description.appendChild(createParagraph("<a href=" + href + " class='link'>&#x1F517 " + anchortext + "</a>", "link"));
+            description.appendChild(createAnchorInParagraph('&#x1F517 ' + anchortext, href, "link"));
         }
     }
 
-    if (projectData.logos) {
+    // if (projectData.logos) {
+    //     description.appendChild(createParagraph("Institutional support", "header"));
+    //     for (const [institution, href] of Object.entries(projectData.logos)) {
+    //         const src = LOGOSDIR + institution + ".png";
+    //         logo = createImage(src, "logo");
+    //         logo.onclick = function() {window.location.href = href};
+    //         description.appendChild(logo);
+    //     }
+    // }
+
+    if (projectData.institutions) {
         description.appendChild(createParagraph("Institutional support", "header"));
-        for (const [institution, href] of Object.entries(projectData.logos)) {
-            const src = LOGOSDIR + institution + ".png";
-            logo = createImage(src, "logo");
-            logo.onclick = function() {window.location.href = href};
-            description.appendChild(logo);
+        for (const [institution, href] of Object.entries(projectData.institutions)) {
+            description.appendChild(createAnchor(institution, href, "link widget"));
         }
     }
 }

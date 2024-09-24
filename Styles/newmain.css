@@ -1,3 +1,7 @@
+html {
+    cursor:none;
+}
+
 body {
   margin:0;
   height:100%;
@@ -61,6 +65,7 @@ body {
   left:16%;
   width:60%;
   height:auto;
+  cursor:none;
 }
 
     #folder .image {
@@ -87,6 +92,7 @@ body {
         width:100%;
         height:50px;
         top:0;
+        cursor:none;
     }
 
 
@@ -102,6 +108,7 @@ body {
     opacity:0;
 
     box-sizing:border-box;
+    cursor:none;
 }
 
 #index {
@@ -166,6 +173,20 @@ body {
         #description .link:hover {
             color:lightgreen;
         }
+
+    #description .link.widget {
+        border: 2px solid black;
+        border-radius: 12px;
+        padding: 4px;
+        text-decoration: none;
+        margin-right: 5px;
+        margin-top: 2px;
+        display: inline-block;
+    }
+
+    #description .link.widget:hover {
+        border: 2px dotted lightgreen;
+    }
 
     #description .logo {
         width: auto;

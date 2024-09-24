@@ -24,7 +24,11 @@ const Projects = {
 						"Performance night documentation":"https://youtu.be/Bx3O0N2nXcs"},
 		logos: {	"afk" : "https://www.amsterdamsfondsvoordekunst.nl/", 
 					"treehousendsm" : "https://www.treehousendsm.com/",
-					"infinia" : "https://infinia.com.tr/en"}
+					"infinia" : "https://infinia.com.tr/en"},
+			
+		institutions: {	"Amsterdams Fonds voor de Kunst" : "https://www.amsterdamsfondsvoordekunst.nl/", 
+			"Treehouse NDSM" : "https://www.treehousendsm.com/",
+			"Infinia" : "https://infinia.com.tr/en"}
 	},
 	
 	"SOX" : {
@@ -43,7 +47,7 @@ const Projects = {
 							"<em>A Young Vivacious Woman Named AriaAccademia</em> [2024]. SOX, Berlin"],
 		videoSources:	[],
 		videoPosters:	[],
-		links : {"SOX Gallery":"https://www.sox-berlin.com/"}
+		institutions : {"SOX Gallery":"https://www.sox-berlin.com/"}
 	},
 	
 	"Neukölln Spiderman" : {
@@ -66,11 +70,15 @@ const Projects = {
 		videoSources:	[],
 		videoPosters:	[],
 		links: {
-			"Premiered August 2024 at <i>Salt Beyoğlu</i> in Istanbul":"https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman"
+			"Premiere August 2024 at <i>Salt Beyoğlu</i> in Istanbul":"https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman"
 		},
 		logos:	{
 			"converse" : "https://www.converse.com/de/en/landing-all-stars",
 			"salt" : "https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman"
+		},
+		institutions:	{
+			"Converse" : "https://www.converse.com/de/en/landing-all-stars",
+			"Salt" : "https://saltonline.org/en/2752/screening-and-conversation-neukolln-spiderman"
 		}
 	},
 	
@@ -101,6 +109,9 @@ const Projects = {
 		logos: {	"vangoghmuseum":"https://www.vangoghmuseum.nl/en",
 					"udk":"https://www.udk-berlin.de/universitaet/"
 		},
+		institutions: {	"Van Gogh Museum":"https://www.vangoghmuseum.nl/en",
+			"University of Arts Berlin":"https://www.udk-berlin.de/universitaet/"
+},
 		links : {"Shaping Generative AI - UdK Fashion Department":"https://www.udk-berlin.de/studium/studium-generale/kurse-courses/studentische-initiativen-kooperationen-sose-2024/shaping-generative-ai-couturing-generative-ai-fashioning-generative-ai/"}
 	},
 	
@@ -128,6 +139,9 @@ const Projects = {
 		videoPosters:	["Media/Projects/Driver/d1.jpg"],
 		logos:	{	"lndw":"https://www.langenachtderwissenschaften.de/",
 					"newpractice":"https://www.newpractice.net/"
+		},
+		institutions : {"Lange Nacht Der Wissenschaften":"https://www.langenachtderwissenschaften.de/",
+						"New Practice" : "https://www.newpractice.net/"
 		}
 	},
 	
@@ -148,7 +162,7 @@ const Projects = {
 		links:{	"Post-Tribal Exhibition":"https://designmuseum.nl/en/tentoonstelling/post-tribal/",
 				"X Siempre (2023)":"https://youtu.be/4q1XZknTEs8"
 		},
-		logos: {"dmdb":"https://designmuseum.nl/en/homepage/"}
+		institutions: {"Design Museum Den Bosch":"https://designmuseum.nl/en/homepage/"},
 	},
 	
 	"Sheraton-Intel" : {
@@ -172,13 +186,14 @@ const Projects = {
 							"<em>Sheraton-Intel</em> [2023].",
 							"<em>Sheraton-Intel</em> [2023]."],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		institutions:{"TACA Studio":"https://www.instagram.com/tacastudio/?hl=en"}
 	},
 	
 	"A Friend To The Cyborgian Echo" : {
 		title: "A Friend To The Cyborgian Echo",
 		year: 2023,
-		description: '<strong>Shown at <i>Prisma Estudio</i> in Lisbon, PT (September 2023)</strong><br/><br/>Created in collaboration with Jason Clark.<br/><br/><em>A Friend To The Cyborgian Echo</em> is an interactive sonic installation, investigating the structural violence of AI hidden in SafeTensor noise.<br><br><a href="https://youtu.be/cn-Wq1UmBL8">More information here.</a><br><br>This project was funded by the Culture Moves Europe Fund (European Union, implemented by the Goethe Institute).',
+		description: '<strong>Shown at <i>Prisma Estudio</i> in Lisbon, PT (September 2023)</strong><br/><br/>Created in collaboration with Jason Clark.<br/><br/><em>A Friend To The Cyborgian Echo</em> is an interactive sonic installation, investigating the structural violence of AI hidden in SafeTensor noise.<br><br>This project was funded by the Culture Moves Europe Fund (European Union, implemented by the Goethe Institute).',
 		imageSources: 	[	"Media/Projects/AFriendToTheCyborgianEcho/HorizontalPoster.jpg",
 						 	"Media/Projects/AFriendToTheCyborgianEcho/AFriendToTheCyborgianEcho_1.jpg",
 							"Media/Projects/AFriendToTheCyborgianEcho/AFriendToTheCyborgianEcho_2.jpg",
@@ -192,7 +207,9 @@ const Projects = {
 							"<em>A Friend To The Cyborgian Echo</em> [2023]. Prisma Estudio, Lisbon 2023",
 							"<em>A Friend To The Cyborgian Echo</em> [2023]. Prisma Estudio, Lisbon 2023"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{"Exhibition video":"https://youtu.be/cn-Wq1UmBL8"},
+		institutions:{"Culture Moves Europe":"https://culture.ec.europa.eu/creative-europe/creative-europe-culture-strand/culture-moves-europe", "Prisma Studio":""}
 	},
 	
 	"We All Scream For Ice Cream!" : {
@@ -208,7 +225,8 @@ const Projects = {
 							"<em>We All Scream For Ice Cream!</em> [2023]. CTM / Transmediale 2023",
 							"<em>We All Scream For Ice Cream!</em> [2023]. CTM / Transmediale 2023"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		institutions:{"CTM":"https://www.ctm-festival.de/","Transmediale":"https://transmediale.de/de", "MANIFEST:IO":"https://www.instagram.com/manifest.io.berlin/"}
 	},
 	
 	/*{
@@ -237,7 +255,7 @@ const Projects = {
 	"Desired Commodities" : {
 		title: "Desired Commodities",
 		year: 2022,
-		description: '<em>Desired Commodities</em> observes deceptive design and the generation of identity in hypermarketing, using IKEA as a case and terrain for intervention. Shown is the prototype for a ' + "Non-Prescriptive Object" + ' - an object that does not prescribe identity. For more information on the project see:<br/><br/><a href="https://nielsgercama.com/desiredcommodities">https://nielsgercama.com/desiredcommodities</a>',
+		description: '<em>Desired Commodities</em> observes deceptive design and the generation of identity in hypermarketing, using IKEA as a case and terrain for intervention. Shown is the prototype for a ' + "Non-Prescriptive Object" + ' - an object that does not prescribe identity.',
 		imageSources:	[ 	"Media/Projects/DesiredCommodities/DesiredCommodities_1.jpg",
 							"Media/Projects/DesiredCommodities/DesiredCommodities_2.jpg",
 							"Media/Projects/DesiredCommodities/DesiredCommodities_3.jpg",
@@ -247,7 +265,8 @@ const Projects = {
 							"<em>NPO</em> [2022]. 'Shape'",
 							"<em>NPO</em> [2022]. Studio photograph"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{"Project page":"https://nielsgercama.com/desiredcommodities"}
 	},
 	
 	"Plastocene" : {
@@ -314,7 +333,7 @@ const Projects = {
 	"The Joy Of Marketing" : {
 		title: "The Joy Of Marketing",
 		year: 2021,
-		description: '<em><strong>Ibuprofen</strong></em> [2022]<br><br><i>Published by <br/><strong>Yes The Void</strong> (2021), <br/> <strong>Simulacrum Magazine</strong> (2022)<br> and <strong>Arts Of The Working Class</strong> (2022)</i> <br><br> <em><strong>The Joy Of Marketing II: Ibuprofen</strong></em> is an illustrated text, combining digital media with storytelling.<br><br><i>Part of the Apelbaum02 Open Call<br><strong>Art Club Anomalie</strong>, Berlin (2021)</i> <br><br> <em><strong>The Joy of Marketing (1)</strong></em> is a ~7 min. animated loop, exploring the body and its relationship to marketing strategies. <br><br> <i>The Joy of Marketing (1)</i> was made in collaboration with <a href="https://www.instagram.com/giulianobolivar/">Giuliano Bolivar</a>, who designed the tattoos coded upon the animated bodies. <br><br><a href="https://ra.co/events/1480478">(Old) event link</a><br><br><a href="https://www.instagram.com/p/CW3Rsrso2Ly/?utm_source=ig_web_copy_link">Promotional video</a>',
+		description: '<em><strong>Ibuprofen</strong></em> [2022]<br><br><i>Published by <br/><strong>Yes The Void</strong> (2021), <br/> <strong>Simulacrum Magazine</strong> (2022)<br> and <strong>Arts Of The Working Class</strong> (2022)</i> <br><br> <em><strong>The Joy Of Marketing II: Ibuprofen</strong></em> is an illustrated text, combining digital media with storytelling.<br><br><i>Part of the Apelbaum02 Open Call<br><strong>Art Club Anomalie</strong>, Berlin (2021)</i> <br><br> <em><strong>The Joy of Marketing (1)</strong></em> is a ~7 min. animated loop, exploring the body and its relationship to marketing strategies. <br><br> <i>The Joy of Marketing (1)</i> was made in collaboration with Giuliano Bolivar, who designed the tattoos coded upon the animated bodies.',
 		imageSources:	[ 	"Media/Projects/TheJoyOfMarketingII/TheJoyOfMarketingII_1.jpg",
 							"Media/Projects/TheJoyOfMarketingII/TheJoyOfMarketingII_2.jpg",
 							"Media/Projects/TheJoyOfMarketingII/TheJoyOfMarketingII_3.jpg",
@@ -328,13 +347,18 @@ const Projects = {
 							"still: <em>The Joy of Marketing I</em> [2021]. Animated video",
 							"still: <em>The Joy of Marketing I</em> [2021]. Animated video"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{"RA":"https://ra.co/events/1480478", "The Joy Of Marketing":"https://www.instagram.com/p/CW3Rsrso2Ly/?utm_source=ig_web_copy_link"},
+		institutions:{	"Arts Of The Working Class":"https://artsoftheworkingclass.org/about",
+						"Anomalie Art Club":"https://ra.co/clubs/121816",
+						"Simulacrum Magazine":"https://www.simulacrum.nl/"
+		}
 	},
 	
 	"Machine Gun Fairies"  : {
 		title: "Machine Gun Fairies",
 		year: 2021,
-		description: '<em><strong>Machine Gun Fairies</strong></em>: Art direction and teaser video for <i>Interior Design</i>, an experimental music outfit from Amsterdam. <br><br>Full video available <a href="https://www.instagram.com/p/CXbE2TPooVW/">here</a>.',
+		description: '<em><strong>Machine Gun Fairies</strong></em>: Art direction and teaser video for <i>Interior Design</i>, an experimental music outfit from Amsterdam',
 		imageSources:	[ 	"Media/Projects/MachineGunFairies/MachineGunFairies_1.jpg",
 							"Media/Projects/MachineGunFairies/MachineGunFairies_2.jpg",
 							"Media/Projects/MachineGunFairies/MachineGunFairies_3.jpg",
@@ -346,7 +370,8 @@ const Projects = {
 							"<em>Machine Gun Fairies</em> [2021]",
 							"<em>Machine Gun Fairies</em> [2021]"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{"Full video":"https://www.instagram.com/p/CXbE2TPooVW/"}
 	},
 	
 	
@@ -354,7 +379,7 @@ const Projects = {
 	"The Squares Have Taken Over" : {
 		title: "The Squares Have Taken Over",
 		year: 2020,
-		description: '<em><strong>The Squares Have Taken Over</strong></em> was an exhibition under the <em>the no thing</em> collective at autonomous cultural center <strong>De Vondelbunker</strong>.<br/><br/><i>Large paintings, AI-generated imagery, holographic video, sculptures</i><br><br>(Old) event link: <a href="https://radar.squat.net/nl/event/amsterdam/vondelbunker/2020-02-21/squares-have-taken-over-exhibition-party">radar.squat</a>',
+		description: '<em><strong>The Squares Have Taken Over</strong></em> was an exhibition under the <em>the no thing</em> collective at autonomous cultural center <strong>De Vondelbunker</strong>.<br/><br/><i>Large paintings, AI-generated imagery, holographic video, sculptures</i>',
 		imageSources:	[ 	"Media/Projects/TheSquaresHaveTakenOver/TheSquaresHaveTakenOver_1.jpg",
 							"Media/Projects/TheSquaresHaveTakenOver/TheSquaresHaveTakenOver_2.jpg",
 							"Media/Projects/TheSquaresHaveTakenOver/TheSquaresHaveTakenOver_3.jpg",
@@ -366,13 +391,14 @@ const Projects = {
 							"<em>The Squares Have Taken Over</em> [2020]. Photography: Andrew Kambel",
 							"<em>The Squares Have Taken Over</em> [2020]. Photography: Andrew Kambel"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{"radar.squat.net":"https://radar.squat.net/nl/event/amsterdam/vondelbunker/2020-02-21/squares-have-taken-over-exhibition-party"}
 	},
 	
 	"Onomy Onome" : {
 		title: "Onomy Onome",
 		year: 2020,
-		description: '<em><strong>Onomy Onome</strong></em> is a ~40 min. film shot in 2020/21. Based on personal experience, <i>Onomy Onome</i> relays the abstracted events leading up to the rape of main character MICHELLE. I wrote, directed and made the animations for <em>Onomy Onome</em>. <br><br> This part animated, part live action film was conducted under the <em>the no thing</em> collective to be featured on a large scale UV-Crystalized display as a holographic image. Photos (3) and (4) were taken during a screening of <em>Onomy Onome</em>, capturing the effect of the holographic projection.<br><br><a href="https://youtu.be/gCL0XyOzTig"> A selection of footage is available here </a>',
+		description: '<em><strong>Onomy Onome</strong></em> is a ~40 min. film shot in 2020/21. Based on personal experience, <i>Onomy Onome</i> relays the abstracted events leading up to the rape of main character MICHELLE. I wrote, directed and made the animations for <em>Onomy Onome</em>. <br><br> This part animated, part live action film was conducted under the <em>the no thing</em> collective to be featured on a large scale UV-Crystalized display as a holographic image. Photos (3) and (4) were taken during a screening of <em>Onomy Onome</em>, capturing the effect of the holographic projection.',
 		imageSources:	[ 	"Media/Projects/OnomyOnome/OnomyOnome_1.jpg",
 							"Media/Projects/OnomyOnome/OnomyOnome_2.jpg",
 							"Media/Projects/OnomyOnome/OnomyOnome_3.jpg",
@@ -392,6 +418,7 @@ const Projects = {
 							"Still: <em>Onomy Onome</em> [2020]",
 							"Still: <em>Onomy Onome</em> [2020]"],
 		videoSources:	[],
-		videoPosters:	[]
+		videoPosters:	[],
+		links:{"Selected footage":"https://youtu.be/gCL0XyOzTig"}
 	}
 }
