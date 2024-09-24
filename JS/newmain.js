@@ -126,11 +126,14 @@ function load_folder(title) {
             label.innerHTML = projectData.imageSpans[i]
             label.className = "imagelabel";
 
-            img = createImage(src, "image");
+            const imgcontainer = document.createElement("div");
+            imgcontainer.className = "imagecontainer";
+            const img = createImage(src, "image");
             //img.style.opacity=0;
-            img.onload = function() {this.style.animation = "none"};
-            folder.appendChild(img);
-            folder.appendChild(label);
+            img.onload = function() {this.parentNode.style.animation = "none"; this.parentNode.style.backgroundColor="transparent";};
+            imgcontainer.appendChild(img);
+            imgcontainer.appendChild(label);
+            folder.appendChild(imgcontainer);
         }
     }
 

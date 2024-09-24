@@ -68,17 +68,27 @@ body {
   cursor:none;
 }
 
-    #folder .image {
+    #folder .imagecontainer {
         position:relative;
         top:0;
         left:0%;
+        width:100%;
+        height:auto;
+        background-color: black;
+        animation: shimmer 2s linear infinite;
+        margin-top:20px;
+    }
+
+    #folder .image {
+        position:relative;
         width:98%;
         height:auto;
-        margin-top:20px;
+        top:0;
+        left:0;
+        
         transition:opacity 0.5s;
         -webkit-transition: opacity 0.5s;
         opacity:1;
-        animation: shimmer 2s linear infinite;
     }
 
     #folder .imagelabel {
