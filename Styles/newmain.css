@@ -95,7 +95,8 @@ body {
         font-size: 10px;
         width:2%;
         writing-mode: vertical-rl;
-        text-orientation: mixed;        
+        text-orientation: mixed;  
+        opacity:0;      
     }
 
     #folder .text {
